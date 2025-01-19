@@ -1,0 +1,610 @@
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+:root{
+    --main-color:rgb(254, 216, 177);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    } 
+}
+@keyframes SlideLeft {
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes SlideRight {
+    from{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes SlideUp {
+    from{
+        opacity: 0;
+        transform: translatey(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.6rem 8%;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+.logo{
+    font-size: 2rem;
+    color: white;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.logo span{
+    color: var(--main-color);
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.navBar a{
+    font-family: monospace;
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+.navBar a:hover,
+.navBar a.active{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+
+}
+#menuIcon{
+    font-size: 3.6rem;
+    color: var(--main-color);
+    display: none;
+}
+
+.home{
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6),rgba(25,25,25,0.8),rgba(25,25,25,1)), url(../img/HeaderBackGround.jpg);
+    background-position: top;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.main{
+    color: white;
+    position: absolute;
+    width: 40%;
+    top: 50%;
+    left: 80%;
+    transform: translate(-80%,-50%);
+}
+.main h1{
+    font-family: monospace;
+    font-size: 8rem;
+    margin-bottom: 5%;
+}
+.main p{
+    font-family: sans-serif;
+    max-width: 60%;
+    font-size: 16px;
+    margin: 2%;
+}
+.main button{
+    border: none;
+    margin: 10px;
+    margin-top: 75px;
+    font-family: cursive;
+    font-size: 26px;
+    padding: 2% 6%; 
+}
+.ourMenuButton{
+    background-color: var(--main-color);
+    color: white;
+}
+.ourMenuButton:hover{
+    background-color: rgb(255, 255, 255);
+    transition: 0.2s;
+    color: black;
+}
+
+.aboutUsButton{
+    background-color: rgb(60, 60, 60);
+    color: white;
+}
+.aboutUsButton:hover{
+    background-color: rgb(255, 255, 255);
+    transition: 0.2s;
+    color: black;
+}
+.aboutUs{
+    background-color: rgb(25, 25, 25);
+    background-position: top;
+    background-size: cover;
+    position: relative;
+    min-height: 70vh;
+    padding: 1rem 6% 1rem;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;   ;
+}
+.aboutUs div{
+    align-content: center;
+    color: white;
+    width: 30%;
+    margin: 2%;
+}
+.about{
+    animation: SlideLeft linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+
+    max-width:  20%;
+}
+.about h4{
+    font-size: 25px;
+    font-family: sans-serif;
+    color: var(--main-color);
+}
+.about h1{
+    margin-top: 1%;
+    font-size: 50px;
+    font-family: cursive;
+    margin-bottom: 1%;
+}
+.about p{
+    margin-top: 12%;
+    font-size: 21px;
+    color: rgb(112, 112, 112);
+}
+.HoursOfWork{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+}
+
+.HoursOfWork h3{
+    text-align: center;
+    font-family: cursive;
+    font-size: 1.8rem;
+    margin-bottom: 8%;
+}
+.HoursOfWork p{
+    text-align: center;
+    font-size: 2rem;
+    font-family: cursive;
+}
+.HoursOfWork span{ 
+    color: var(--main-color);
+}
+.aboutUsImg{
+    display: block;
+    animation: SlideRight linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+
+    width: 20%;
+    height: 20%;
+    content: center;
+    margin: 10% 0% 10% 0%;
+}
+.coffees{
+    font-family: monospace;
+    background-image:linear-gradient(rgba(25,25,25,0.5),rgba(25,25,25,0.5),rgba(25,25,25,0.5),rgba(25,25,25,1)), url(../img/coffeesBackGround.jpg);
+    background-position: top;
+    background-size: cover;
+    position: relative;
+
+    min-height: 100vh;
+    padding: 10rem 8% 10rem;
+}
+.heading{
+    color: white;
+    font-size: 8rem;
+    text-align: center;
+}
+.coffees .heading{
+    color: black;
+    font-size: 10rem;
+}
+.coffeesContainer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    margin-top: 10rem;
+    gap: 3rem;
+}
+.coffeesContainer .coffeesBox{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+
+    position: relative;
+    border-radius: 2rem;
+    height: 450px;
+    border: 2px solid var(--main-color);
+    overflow: hidden;
+    display: flex;
+}
+.coffeesBox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+}
+.coffeesBox:hover img{
+    transform: scale(1.05);
+}
+.coffeesBox .coffeesInfo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.coffeesBox .coffeesInfo:hover{
+    background: radial-gradient(rgba(0,0,0,0.4),var(--main-color));
+    transform: scale(1.05);
+}
+.coffeesInfo h4{
+    font-size: 2rem;
+    color: white;
+    font-weight: 800;
+}
+.coffeesInfo p{
+    font-size: 1rem;
+    margin: 0.3rem 0 1rem;
+    font-weight: 600;
+    color: white;
+}
+.coffeesInfo a{
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: black;
+    border: 2px solid var(--main-color);
+    border-radius: 50%;
+}
+.coffeesInfo a i{
+    color: var(--main-color);
+}
+
+.reviews{
+    font-family: monospace;
+    background-color: rgb(25, 25, 25);
+
+    min-height: 100vh;
+    padding: 10rem 9% 10rem;
+}
+.reviews h2{
+    margin-bottom: 10rem;
+}
+.reviewsContainer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top: 8rem;
+    gap: 2rem;
+}
+.reviewsContainer .reviewsBox{
+    animation: SlideUp linear;
+    animation-timeline: view();
+    animation-range: entry 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 500px;
+    padding: 3rem   1.2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 0.2rem solid var(--main-color);
+    cursor: pointer;
+    transition: 0.4s ease;
+    color: white;
+}
+.reviewsContainer .reviewsBox:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+    background-color: white;
+    color: black;
+}
+.reviewsBox i{
+    font-size: 7rem;
+    color: var(--main-color);
+}
+.reviewsBox h3{
+    font-size: 2.3rem;
+}
+.reviewsBox h3 span{
+    color: gray;
+    font-size: .6rem;
+}
+.reviewsBox p{
+    font-size: 1rem;
+    margin: 1rem 0 3rem;
+}
+.reviewsBox p span{
+    color: var(--main-color);
+    font-size: 1.2rem;
+}
+.contact{
+    font-family: monospace;
+    background-image:linear-gradient(rgba(25,25,25,1),rgba(25,25,25,0.3),rgba(25,25,25,0.3),rgba(25,25,25,.3)), url(../img/contactBackGround.jpg);
+    background-position: top;
+    background-size: cover;
+    position: relative;
+
+
+    min-height: 100vh;
+    padding: 10rem 9% 10rem;
+}
+.contact h2{
+    margin-bottom: 3rem;
+}
+.contact h2 span{
+    color: var(--main-color);
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.contact form .inputBox{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact form .inputBox input,
+.contact form textarea{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    background: rgb(25, 25, 25);
+    border-radius: 0.8rem;
+    border: 2px solid var(--main-color);
+    margin: 1rem 0;
+    resize: none; 
+}
+.contact form .btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: white;
+    border: 2px solid transparent;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+.contact form .btn:hover{
+    transform: scale(1.05);
+    background: rgb(25, 25, 25);
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+}
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: var(--main-color);
+}
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+}
+.footer .social a{
+    font-size: 25px;
+    color: white;
+    border: 2px solid white;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+.footer .social a:hover{
+    transform: scale(1.2)translateY(-10px);
+    background-color: white;
+    color: var(--main-color);
+}
+.footer .copyright{
+    font-family: monospace;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+.copyright a{
+    font-family: sans-serif;
+    font-size: 21px;
+    color: rgb(25, 25, 25);
+    transition: 0.3s ease;
+}
+.copyright a:hover{
+    font-size: 24px;
+}
+    
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-left: 2px solid rgb(25, 25, 25);
+    border-top: 2px solid rgb(25, 25, 25);
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(25, 25, 25);
+}
+
+@media(max-width:1200px) {
+    html{
+        font-size: 55%;
+    }
+    .reviewsContainer{
+        padding: 1rem;
+        grid-template-columns: repeat(1.1fr);
+        margin: 0 3rem;
+    }
+}
+
+@media(max-width:992px){
+    header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .coffees{
+        padding-bottom: 7rem;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+@media(max-width:895px){
+    #menuIcon{
+        display: block;
+    }
+    .navBar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: rgba(0,0,0,0.9);
+        display: none;
+    }
+    .navBar.active{
+        display: block;
+    }
+    .navBar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .main{
+        text-align: center;
+        color: white;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .main p{
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        margin: 1rem;
+    }
+    .main h1{
+        font-size: 8rem;
+    }
+    .main button{
+        border: none;
+        margin: 10px;
+        margin-top: 120px;
+        font-family: cursive;
+        font-size: 26px;
+        padding: 2% 6%; 
+    }
+    .aboutUs{
+        flex-direction: column;
+        text-align: center;
+    }
+    .about{
+        max-width:  100%;
+        padding-bottom: 3rem;
+    }
+    .aboutUs div{
+        width: 100%;
+    }
+    .HoursOfWork h3{
+        font-size: 3rem;
+    }
+    .HoursOfWork p{
+        font-size: 4rem;
+    }
+    .aboutUsImg{
+        display: none;
+    }
+    .coffees h2{
+        margin-bottom: 3rem;
+    }
+    .reviews h2{
+        margin-bottom: 3rem;
+    }
+    .coffeesContainer{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .reviewsContainer{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
