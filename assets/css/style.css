@@ -83,7 +83,7 @@ header{
 }
 .navBar a{
     font-family: monospace;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: white;
     margin-left: 4rem;
     font-weight: 500;
@@ -121,7 +121,7 @@ header{
 }
 .main h1{
     font-family: monospace;
-    font-size: 8rem;
+    font-size: 7rem;
     margin-bottom: 5%;
 }
 .main p{
@@ -162,7 +162,7 @@ header{
     background-position: top;
     background-size: cover;
     position: relative;
-    min-height: 70vh;
+    min-height: 100vh;
     padding: 1rem 6% 1rem;
     width: 100%;
 
@@ -184,19 +184,19 @@ header{
     max-width:  20%;
 }
 .about h4{
-    font-size: 25px;
+    font-size: 1.5rem;
     font-family: sans-serif;
     color: var(--main-color);
 }
 .about h1{
     margin-top: 1%;
-    font-size: 50px;
+    font-size: 2.5rem;
     font-family: cursive;
     margin-bottom: 1%;
 }
 .about p{
-    margin-top: 12%;
-    font-size: 21px;
+    margin-top: 6%;
+    font-size: 1.1rem;
     color: rgb(112, 112, 112);
 }
 .HoursOfWork{
@@ -213,7 +213,7 @@ header{
 }
 .HoursOfWork p{
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: cursive;
 }
 .HoursOfWork span{ 
@@ -228,7 +228,7 @@ header{
     width: 20%;
     height: 20%;
     content: center;
-    margin: 10% 0% 10% 0%;
+    margin: 20% 0% 20% 0%;
 }
 .coffees{
     font-family: monospace;
@@ -253,7 +253,7 @@ header{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     align-items: center;
-    margin-top: 10rem;
+    margin-top: 6rem;
     gap: 3rem;
 }
 .coffeesContainer .coffeesBox{
@@ -331,12 +331,12 @@ header{
     padding: 10rem 9% 10rem;
 }
 .reviews h2{
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
 }
 .reviewsContainer{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    margin-top: 8rem;
+    margin-top: 4rem;
     gap: 2rem;
 }
 .reviewsContainer .reviewsBox{
@@ -391,10 +391,10 @@ header{
 
 
     min-height: 100vh;
-    padding: 10rem 9% 10rem;
+    padding: 8rem 6% 8%;
 }
 .contact h2{
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 .contact h2 span{
     color: var(--main-color);
@@ -403,7 +403,7 @@ header{
     max-width: 70rem;
     margin: 1rem auto;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 .contact form .inputBox{
     display: flex;
@@ -501,7 +501,7 @@ header{
     background-color: rgb(25, 25, 25);
 }
 
-@media(max-width:1200px) {
+@media(max-width:1280px) {
     html{
         font-size: 55%;
     }
@@ -509,6 +509,14 @@ header{
         padding: 1rem;
         grid-template-columns: repeat(1.1fr);
         margin: 0 3rem;
+    }
+    .aboutUsImg{
+        margin: 35% 0% 35% 0%;
+    }
+    .navBar a{
+        font-size: 2rem;
+        color: white;
+        margin-left: 4rem;
     }
 }
 
@@ -524,6 +532,9 @@ header{
     }
     .footer{
         padding: 2rem 3%;
+    }
+    .aboutUsImg{
+        margin: 45% 0% 45% 0%;
     }
 }
 @media(max-width:895px){
@@ -562,18 +573,19 @@ header{
         top: 50%;
         left: 50%;
         transform: translate(-50%,-50%);
-        margin: 1rem;
+        font-size: 14px;
+        margin: .8rem;
     }
     .main h1{
-        font-size: 8rem;
+        font-size: 6.4rem;
     }
     .main button{
         border: none;
         margin: 10px;
         margin-top: 120px;
         font-family: cursive;
-        font-size: 26px;
-        padding: 2% 6%; 
+        font-size: 24px;
+        padding: 2% 5%; 
     }
     .aboutUs{
         flex-direction: column;
@@ -581,7 +593,10 @@ header{
     }
     .about{
         max-width:  100%;
-        padding-bottom: 3rem;
+        padding-bottom: 1rem;
+    }
+    .about p{
+        font-size: 2rem;
     }
     .aboutUs div{
         width: 100%;
@@ -590,21 +605,48 @@ header{
         font-size: 3rem;
     }
     .HoursOfWork p{
-        font-size: 4rem;
+        font-size: 3rem;
     }
     .aboutUsImg{
         display: none;
     }
     .coffees h2{
-        margin-bottom: 3rem;
+        margin-bottom: 2.6rem;
     }
     .reviews h2{
-        margin-bottom: 3rem;
+        margin-bottom: 2.6rem;
     }
     .coffeesContainer{
         grid-template-columns: repeat(1,1fr);
     }
+    .coffeesInfo h4{
+        font-size: 3rem;
+        color: black;
+        font-weight: 800;
+    }
+    .coffeesInfo p{
+        font-size: 2rem;
+        margin: 0.3rem 0 1rem;
+        font-weight: 600;
+        color: black;
+    }
+    .coffeesInfo a{
+        width: 5rem;
+        height: 5rem;
+    }
+    .coffeesInfo a i{
+        font-size: 3rem;
+    }
     .reviewsContainer{
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(1,1fr);
+    }
+    .reviewsContainer .reviewsBox{
+        animation: SlideLeft linear;
+        animation-timeline: view();
+        animation-range: entry 0;
+    }
+    .reviewsBox p{
+        font-size: 1.6rem;
+        margin: 1rem 0 3rem;
     }
 }
