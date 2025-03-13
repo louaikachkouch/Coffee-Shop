@@ -7,191 +7,352 @@
 
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/img/coffee-love.jpg">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- BoxIcon Linking -->
-
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <header>
-        <a href="" class="logo">
-            Coffee<span>SHOP</span>
-        </a>
-
-        <i class='bx bx-menu' id="menuIcon"></i>
-
-        <nav class="navBar">
-            <a href="#home" class="active">Home</a>
-            <a href="#aboutUs">About Us</a>
-            <a href="#coffees">Coffees</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#contact">Contact Us</a>
-        </nav>
-    </header>
-    
-    <main>
-        <!-- Home Page -->
-        <section class="home" id="home">
-            <div class="main">
-                <h1>CoffeeShop</h1>
-                <p>A cozy coffee shop filled with the rich aroma of freshly brewed coffee is the perfect place to unwind,
-                     sip your favorite latte, watch the world go by.
-                </p>
-                <a href="#menu"><button class="ourMenuButton">Our Menu</button></a>
-                <a href="#aboutUs"><button class="aboutUsButton">About Us</button></a>
-            </div>
-        </section>
-
-        <!-- About Us -->
-        <section class="aboutUs" id="aboutUs">
-            <div class="about">
-                <h4>Who We Are</h4>
-                <h1><strong>About Our CoffeeShop</strong></h1>
-                <p>
-                    Our coffee shop is more than just a place to grab a cup of coffee
-                     it&apos;s a vibrant gathering spot where connections are made, stories
-                    are shared, and every detail, from the rich aroma of freshly brewed
-                    coffee to the cozy seating, is designed to make you feel right at home.
-                </p>
-            </div>
-            <div class="HoursOfWork">
-                <h3>Opening Hours</h3>
-                <p><span>Monday:</span> 8:00-21:00</p>
-                <p><span>Tuesday:</span> 8:00-21:00</p>
-                <p><span>Wednesday:</span> 8:00-21:00</p>
-                <p><span>Thursday:</span> 8:00-21:00</p>
-                <p><span>Friday:</span> 8:00-21:00</p>
-                <p><span>Saturday:</span> 8:00-18:00</p>
-                <p><span>Sunday:</span> Closed</p>
-            </div>
-            <img src="assets/img/coffee-love.jpg" class="aboutUsImg">
-        </section>
-
-        <!-- Coffees -->
-        <section class="coffees" id="coffees">
-            <h2 class="heading">Coffees</h2>
-            <div class="coffeesContainer">
-
-                <div class="coffeesBox">
-                    <img src="assets/img/coffee1.jpg" alt="">
-                    <div class="coffeesInfo">
-                        <h4>Expresso</h4>
-                        <p>
-                            Espresso coffee is a rich, concentrated shot of bold flavor, crafted by forcing 
-                            hot water through finely ground coffee beans, delivering an intense and aromatic experience in every sip.
-                        </p>
-                        <a href="#">
-                            <i class='bx bxs-coffee' ></i>
-                        </a>
-                    </div>
-                </div>   
-                <div class="coffeesBox">
-                        <img src="assets/img/coffee2.png" alt="">
-                        <div class="coffeesInfo">
-                            <h4>Creamy Coffee</h4>
-                            <p>          
-                                Creamy coffee is a luxurious blend of smooth, velvety texture and rich 
-                                flavor, offering a comforting and indulgent experience in every cup.
-                            </p>
-                            <a href="#">
-                                <i class='bx bxs-coffee' ></i>
-                            </a>
-                        </div>
-                </div>
-                <div class="coffeesBox">
-                        <img src="assets/img/coffee3.jpg" alt="">
-                        <div class="coffeesInfo">
-                            <h4>cappuccino</h4>
-                            <p>
-                                Cappuccino is a classic Italian coffee, perfectly balanced with a bold espresso base, 
-                                a layer of steamed milk, and a generous topping of frothy foam for a rich and satisfying experience.
-                            </p>
-                            <a href="#">
-                                <i class='bx bxs-coffee' ></i>
-                            </a>
-                        </div>
-                </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Reviews -->
-        <section class="reviews" id="reviews">  
-            <h2 class="heading">Reviews</h2>
-
-            <div class="reviewsContainer">
-
-                <div class="reviewsBox">
-                    <i class='bx bxs-user-circle'></i>
-                    <h3>Michael R,<span>Coffee Enthusiast</span></h3>
-                    
-                    <p>
-                        <span>"</span>This coffee shop is a hidden gem! The espresso is perfectly balanced,
-                         with just the right amount of crema, and the pour-over options are a coffee lover&apos;s dream. 
-                        The baristas are knowledgeable and clearly passionate about their craft. If you're serious 
-                        about coffee, this is the place to be!<span>"</span>
-                    </p>
-                </div>
-
-                <div class="reviewsBox">
-                    <i class='bx bxs-user-circle'></i>
-                    <h3>Samantha T, <span>Local Patron</span></h3>
-                    <p>
-                        <span>"</span>I absolutely love spending time here. The atmosphere is warm and inviting, 
-                        with cozy seating and the perfect background music. It's my go-to spot for catching up 
-                        with friends or diving into a good book. Plus, the pastries are to die for!<span>"</span>
-                    </p>
-                </div>
-
-                <div class="reviewsBox">
-                    <i class='bx bxs-user-circle'></i>
-                    <h3>Jessica W,<span>Neighborhood Regular</span></h3>
-                    <p>
-                        <span>"</span>This isn't just a coffee shop; it's a community hub. From the local art on the walls to 
-                        the open mic nights, there&apos;s always something happening here. The owners clearly care about 
-                        their customers and the neighborhood. It's more than just great coffee—it's a place that feels like home.<span>"</span>
-                    </p>
-                </div>
-
-                <div class="reviewsBox">
-                    <i class='bx bxs-user-circle'></i>
-                    <h3>Yassmine M,<span>Busy Professional</span></h3>
-                    <p>
-                        <span>"</span>This coffee shop has become my morning ritual. The staff is incredibly friendly,
-                         and they somehow always get my order just right, even when I&apos;m in a rush. The 
-                         coffee is top-notch, and they have the best breakfast sandwiches in town. Highly recommend!<span>"</span>
-                    </p>
-                </div>
-
-            </div>
-        </section>
-
-        <!--Contact Us-->
-        <section class="contact" id="contact">
-            <h2 class="heading">Contact <span>US</span></h2>
-            <form action="#">
-                <div class="inputBox">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="email">   
-                </div>
-                <div class="inputBox">
-                    <input type="number" placeholder="Phone Number">
-                    <input type="text" placeholder="Subject">   
-                </div>
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-                <input type="submit" value="Send Message" class="btn">
-            </form>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="social">
-            <a href=""><i class='bx bxl-instagram-alt' ></i></a>
-            <a href=""><i class='bx bxl-facebook' ></i></a>
-            <a href=""><i class='bx bxl-tiktok' ></i></a>
-            <a href=""><i class='bx bxl-linkedin'></i></a>
+    <section class="home" id="home">
+        <div class="header">
+            <a href="" class="logo">
+                Coffee<span>SHOP</span>
+            </a>
+            <i class='bx bx-menu' id="menuIcon"></i>
+            <nav class="navBar">
+                <a href="index.html" class="active"><strong>Home</strong></a>
+                <a href="under-construction.html"><strong>About Us</strong></a>
+                <a href="under-construction.html"><strong>Products</strong></a>
+                <a href="under-construction.html"><strong>Blog</strong></a>
+                <a href="under-construction.html"><strong>Gallery</strong></a> 
+                <a href="under-construction.html"><strong>Testimonials</strong></a>
+            </nav>
         </div>
-        <!--please dont steal it #bras omek ^-^ -->
-        <p class="copyright">Made By <a href="https://louaikachkouch.github.io/iPortfolio/">Louai Kachkouch</a> | <span>&copy; Hydrolic Station</span></p>
-    </footer>
+        <div class="main">
+            <h1>Coffee Shop</h1>
+            <a href="under-construction.html"><button class="defaultButton">Our Menu</button></a>
+            <a href="under-construction.html"><button class="aboutUsButton">About Us</button></a>
+        </div>
+        <img src="assets/img/coffee_cut_long.png" alt="">
+    </section>
+    <script src="assets/scripts/script.js"></script>
+    <section class="aboutUs">
+        <div class="aboutmain">
+            <h3><strong>Who We Are</strong></h3>
+            <h2><strong>About our Shop</strong></h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus fuga debitis nemo saepe accusamus fugit expedita illo obcaecati tempore nesciunt sit maiores omnis assumenda ipsa, minima temporibus! Quidem, in ducimus?</p>
+            <a href="under-construction.html"><button class="defaultButton">Read More</button></a>
+        </div>
+        <div class="aboutinfo">
+            <div class="infoBox">
+                <i class='bx bxs-coffee-bean' ></i>
+                <h4>The best World sorts</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sit reprehenderit, qui accusantium officia a nemo vel voluptas aliquam dignissimos!
+                </p>
+            </div>
+            <div class="infoBox">
+                <i class='bx bx-store-alt' ></i>
+                <h4>Many points of sale</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sit reprehenderit, qui accusantium officia a nemo vel voluptas aliquam dignissimos!
+                </p>
+            </div>
+            <div class="infoBox">
+                <i class='bx bx-coffee' ></i>
+                <h4>Professional baristas</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sit reprehenderit, qui accusantium officia a nemo vel voluptas aliquam dignissimos!
+                </p>
+            </div>
+            <div class="infoBox">
+                <i class='bx bx-coffee-togo' ></i>
+                <h4>24/7 fast delivery</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum sit reprehenderit, qui accusantium officia a nemo vel voluptas aliquam dignissimos!
+                </p>
+            </div>
+        </div>
+    </section>
 
+    <!-- products -->
+    <section class="products">
+        <div class="section-head">
+            <h4 class="back-title">Products</h4>
+            <h3 class="under-title">Chose Your Coffee</h3>
+            <h1 class="title">Our Products</h1>
+        </div>
+        <div class="all-products">
+            <div class="product">
+                <img src="assets/img/gusto-crema-beans.png" alt="">
+                <div class="product-info">
+                    <h4 class="product-title">Gusto Crema Beans</h4>
+                    <p class="description">Gusto Crema Beans deliver rich, smooth flavor with a bold aroma.</p>
+                    <p class="product-price">$21.00</p>
+                    <a class="product-btn" href="#"><i class='bx bx-cart'></i> Buy Now</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="assets/img/grand-mere.png" alt="">
+                <div class="product-info">
+                    <h4 class="product-title">Grand Mere</h4>
+                    <p class="description">Grand Mère beans offer a balanced, aromatic coffee with smooth richness.</p>
+                    <p class="product-price">$19.50</p>
+                    <a class="product-btn" href="#"><i class='bx bx-cart'></i> Buy Now</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="assets/img/expresso.png" alt="">
+                <div class="product-info">
+                    <h4 class="product-title">Expresso</h4>
+                    <p class="description">Espresso is a strong, rich coffee with a bold, smooth finish.</p>
+                    <p class="product-price">$2.51</p>
+                    <a class="product-btn" href="#"><i class='bx bx-cart'></i> Buy Now</a>
+                </div>
+            </div>
+            <div class="product">
+                <img src="assets/img/cake.png" alt="">
+                <div class="product-info">
+                    <h4 class="product-title">Chocolate Cake</h4>
+                    <p class="description">Chocolate cake a rich, moist dessert with deep cocoa flavor.</p>
+                    <p class="product-price">$5.32</p>
+                    <a class="product-btn" href="#"><i class='bx bx-cart'></i> Buy Now</a>
+                </div>
+            </div>
+        </div>
+        <a href="under-construction.html"><button class="products-button">More Products</button></a>
+    </section>
+    <!-- end products -->
+    
+    <!-- menu -->
+    <section class="menu">
+        <div class="container">
+            <div class="header">
+                <div class="title">
+                    <h3>our menu</h3>
+                    <h1>Choose your drink</h1>
+                </div>
+                <nav class="nav-bar">
+                    <a href="assets/menu/menu-coffee.html" target="frame">Coffee</a>
+                    <a href="assets/menu/menu-tea.html" target="frame">Tea</a>
+                    <a href="assets/menu/menu-dessert.html" target="frame">Dessert</a>
+                </nav>
+            </div>
+            <div class="menu-frame">
+                <iframe src="assets/menu/menu-coffee.html" frameborder="0" name="frame"></iframe>
+            </div>
+        </div>
+    </section>
+    <!-- end menu -->
+
+    <!-- testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-head">
+                <h3 class="under-title">What Our Clients Say</h3>
+                <h1 class="title">Testimonials</h1>
+            </div>
+            <div class="testimonials-content">
+                <div class="swiper testimonials-slider js-testimonials-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide testimonials-item">
+                            <div class="info">
+                                <img src="assets/img/testimonials/t1.jpg" alt="">
+                                <div class="text-box">
+                                    <h3 class="name">Louai Kachkouch</h3>
+                                    <span class="job">web developer</span>
+                                </div>
+                            </div>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam est blanditiis nihil totam dolorem temporibus sunt omnis quae vitae, molestiae dolores dolore, aperiam deserunt necessitatibus, ipsa facilis. Beatae, ab quia!</p>
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonials-item">
+                            <div class="info">
+                                <img src="assets/img/testimonials/t2.jpg" alt="">
+                                <div class="text-box">
+                                    <h3 class="name">Michael Roalson</h3>
+                                    <span class="job">Coffee Enthusiast</span>
+                                </div>
+                            </div>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam est blanditiis nihil totam dolorem temporibus sunt omnis quae vitae, molestiae dolores dolore, aperiam deserunt necessitatibus, ipsa facilis. Beatae, ab quia!</p>
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bx-star' ></i>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonials-item">
+                            <div class="info">
+                                <img src="assets/img/testimonials/t3.jpg" alt="">
+                                <div class="text-box">
+                                    <h3 class="name">Muhammad Padilla</h3>
+                                    <span class="job">Busy Professional</span>
+                                </div>
+                            </div>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam est blanditiis nihil totam dolorem temporibus sunt omnis quae vitae, molestiae dolores dolore, aperiam deserunt necessitatibus, ipsa facilis. Beatae, ab quia!</p>
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bx-star' ></i>
+                            </div>
+                        </div>
+                        <div class="swiper-slide testimonials-item">
+                            <div class="info">
+                                <img src="assets/img/testimonials/t4.jpg" alt="">
+                                <div class="text-box">
+                                    <h3 class="name">Brayan Valencia</h3>
+                                    <span class="job">Neighborhood Regular</span>
+                                </div>
+                            </div>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam est blanditiis nihil totam dolorem temporibus sunt omnis quae vitae, molestiae dolores dolore, aperiam deserunt necessitatibus, ipsa facilis. Beatae, ab quia!</p>
+                            <div class="rating">
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star' ></i>
+                                <i class='bx bxs-star-half' ></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination js-testimonials-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <!-- end testimonials -->
+    <section class="blog">
+        <div class="section-head">
+            <h4 class="back-title">Blog</h4>
+            <h3 class="under-title">our blog</h3>
+            <h1 class="title">Recent posts</h1>
+        </div>
+        <div class="all-blogs">
+            <div class="blogs">
+                <div class="img-holder">
+                    <img src="assets/img/blogs/blog1.jpg" alt="">
+                </div>
+                <div class="blog-info">
+                    <h4 class="blog-title">Gusto Crema Beans</h4>
+                    <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, reiciendis deleniti similique rerum quos eum, pariatur beatae velit dolorem dolores optio! Velit voluptas, fugiat nisi autem eius dolores sequi saepe!</p>
+                    <div class="blog-details">
+                        <div class="date">
+                            <div class="day">
+                                <h4 >24</h4>
+                            </div>
+                            <div class="month-year">
+                                <p>September</p>
+                                <p>2025</p>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <p><i class='bx bxs-heart'></i>2000</p>
+                            <p><i class='bx bxs-message-rounded-dots'></i>25</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blogs">
+                <div class="img-holder">
+                    <img src="assets/img/blogs/blog2.jpg" alt="">
+                </div>
+                <div class="blog-info">
+                    <h4 class="blog-title">Gusto Crema Beans</h4>
+                    <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, reiciendis deleniti similique rerum quos eum, pariatur beatae velit dolorem dolores optio! Velit voluptas, fugiat nisi autem eius dolores sequi saepe!</p>
+                    <div class="blog-details">
+                        <div class="date">
+                            <div class="day">
+                                <h4 >24</h4>
+                            </div>
+                            <div class="month-year">
+                                <p>September</p>
+                                <p>2025</p>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <p><i class='bx bxs-heart'></i>2000</p>
+                            <p><i class='bx bxs-message-rounded-dots'></i>25</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="blogs">
+                <div class="img-holder">
+                    <img src="assets/img/blogs/blog3.jpg" alt="">
+                </div>
+                <div class="blog-info">
+                    <h4 class="blog-title">Gusto Crema Beans</h4>
+                    <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, reiciendis deleniti similique rerum quos eum, pariatur beatae velit dolorem dolores optio! Velit voluptas, fugiat nisi autem eius dolores sequi saepe!</p>
+                    <div class="blog-details">
+                        <div class="date">
+                            <div class="day">
+                                <h4 >24</h4>
+                            </div>
+                            <div class="month-year">
+                                <p>September</p>
+                                <p>2025</p>
+                            </div>
+                        </div>
+                        <div class="info">
+                            <p><i class='bx bxs-heart'></i>2000</p>
+                            <p><i class='bx bxs-message-rounded-dots'></i>25</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="main">
+            <a href="" class="logo">
+                Coffee<span>SHOP</span>
+            </a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi ipsam sunt excepturi? Odio adipisci quibusdam delectus eum accusantium, corrupti et temporibus exercitationem, illum quos veritatis ea molestiae distinctio aliquam dolores!</p>
+        </div>
+        <div class="explore">
+            <h1>EXPLORE</h1>
+            <div class="all-explore">
+                <div class="container">
+                    <a href="index.html"><i class='bx bx-chevron-right' ></i><strong>Home</strong></a>
+                    <a href=""><i class='bx bx-chevron-right' ></i><strong>About Us</strong></a>
+                    <a href=""><i class='bx bx-chevron-right' ></i><strong>Products</strong></a>
+                </div>
+                <div class="container">
+                    <a href=""><i class='bx bx-chevron-right' ></i><strong>Blog</strong></a>
+                    <a href=""><i class='bx bx-chevron-right' ></i><strong>Gallery</strong></a>
+                    <a href=""><i class='bx bx-chevron-right' ></i><strong>Testimonials</strong></a>
+                </div>
+            </div>
+        </div>
+        <div class="contact-us">
+            <h1>CONTUCT US</h1>
+            <div class="container">
+                <p><i class='bx bxs-map'></i>44 Danwers, NY City, USA, 70-102</p>
+                <p><i class='bx bxs-phone' ></i>(+216) 98 123 456</p>
+                <p><i class='bx bxl-gmail' ></i><a href="">example@gmail.com</a></p>
+                <p><i class='bx bxl-instagram-alt' ></i><a href="">instagram link</a></p>         
+            </div>
+        </div>
+    </section> 
+    <footer>
+        <div>
+            <p>&copy; 2025 <a href="https://louaikachkouch.github.io/iPortfolio/">louai kachkouch</a> | All Rights Reserved</p>
+        </div>
+    </footer>
+    <div class="disclaimer">
+        <center>
+            <p>This web site is still under construction so its not optimized yet for all devices</p>
+        </center>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/scripts/script.js"></script>
 </body>
 </html>
